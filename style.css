@@ -3,9 +3,17 @@
   padding: 0;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 body {
   display: grid;
   grid-template: 1fr 7fr / 1fr 7fr;
+  max-height: 100vh;
+  max-width: 100vw;
+
 }
 
 .header{
@@ -13,14 +21,18 @@ body {
 }
 
 .sideboard{
+  padding: 1rem;
   background-color: mistyrose;
   grid-row: 1/-1;
-
   display: grid;
-  grid-template-rows: 1fr 2fr 2fr;
-  place-items: start center;
-  gap: 1rem;
+  grid-template: max-content max-content max-content/ 1fr;
+  gap: 3rem;
 }
+
+.sideboard li {
+  margin: 1rem 0rem 1rem 1rem;
+}
+
 
 .main {
   background-color: linen;
