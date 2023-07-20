@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template: 1fr 7fr / 1fr 7fr;
+}
+
+.header{
+  background-color: darkseagreen;
+}
+
+.sideboard{
+  background-color: mistyrose;
+  grid-row: 1/-1;
+}
+
+.main {
+  background-color: linen;
+}
