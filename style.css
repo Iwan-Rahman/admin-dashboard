@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 *{
   margin: 0;
   padding: 0;
+}
+
+button {
+  appearance: none;
+  border: none;
+}
+
+:root {
+  --primary-color: 43, 65, 98;
+  --secondary-color: 215, 179, 119;
+  --tertiary-color: 105, 86, 58;
+  --back-color: 245, 240, 246; 
+  --accent-color: 56, 95, 113;
 }
 
 ul {
@@ -14,16 +29,13 @@ body {
   height: 100vh;
   width: 100vw;
   max-width: 100%;
-
-}
-
-.header{
-  background-color: darkseagreen;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .sideboard{
   padding: 1rem;
-  background-color: mistyrose;
+  background-color: rgba(var(--primary-color), 1);
+  color: rgb(var(--back-color));
   grid-row: 1/-1;
   display: grid;
   grid-template: max-content max-content max-content/ 1fr;
@@ -36,14 +48,16 @@ body {
 
 
 .main {
-  background-color: linen;
+  background-color: rgba(var(--back-color), alpha);
 }
 
 .header {
-  padding: 1rem;
+  padding: 1rem 3rem;
   display: grid;
   grid-template: 1fr 2fr / 3fr 1fr;
   gap: 1rem;
+  background-color: rgba(var(--tertiary-color), 1);
+  color: rgb(var(--back-color));
 }
 
 
@@ -53,9 +67,16 @@ body {
 }
 
 .profile-menu > ul, .profile-actions{
-  gap: 1rem;
   justify-content: center;
   align-items: center;
+}
+
+.profile-menu > ul {
+  gap: 2rem;
+}
+
+.profile-actions{
+  gap: 1rem;
 }
 
 .header > form {
@@ -70,6 +91,7 @@ body {
 .profile-banner {
   display: grid;
   grid-template: 1fr 1fr / auto 1fr;
+  gap: 0rem 1rem;
 }
 
 .profile-banner > div {
@@ -77,10 +99,14 @@ body {
   margin: auto 0;
 }
 
+.profile-banner h3 {
+  align-self: end;
+}
+
 .main {
   padding: 1rem;
   display: grid;
-  grid-template: 1fr 1fr / 3fr 1fr;
+  grid-template: 2fr 1fr / 3fr 1fr;
   gap: 1rem;
 }
 
@@ -99,15 +125,79 @@ body {
   gap: 2rem;
 }
 
-.announcement > ul {
-  display: grid;
-  grid-template: 5rem 5rem 5rem/ 1fr;
-  margin-left: 1rem;
-
+.project > ul > li {
+  background-color: rgb(var(--secondary-color));
+  font-family: "Indie Flower", cursive;
+  border-bottom-right-radius: 1rem;
+  border-bottom: 0.3rem solid rgba(var(--accent-color),1);
 }
 
-.trending > ul {
-  display: grid;
-  grid-template: 5rem 5rem 5rem/ 1fr 3fr;
-  margin-left: 1rem;
+
+.announcement, .trending {
+  border: 0.2rem solid rgb(var(--accent-color));
+  padding: 1rem;
+  border-radius: 1rem 3rem;
 }
+
+
+.announcement > ul, .trending > ul {
+  display: grid;
+  grid-template: 1fr 1fr 1fr/ 1fr;
+  margin-left: 1rem;
+  align-items: center;
+  margin-top: -1rem;
+}
+
+.announcement  h3{
+  font-size: 1rem;
+}
+
+.announcement  p{
+  font-size: 0.8rem;
+}
+
+.trending li > div:first-child {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.trending li {
+  display: grid;
+  grid-template: 1fr / 1fr 3fr;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.announcement > ul > li , .trending > ul > li{
+  overflow: hidden;
+  border-bottom: 0.2rem double rgb(var(--accent-color));
+}
+
+
+.profile-banner > div {
+  box-sizing: border-box;
+  padding: 0.2rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color:aquamarine;
+}
+
+.profile-menu li:first-child {
+  height: 2rem;
+  width: 2rem;
+}
+
+.profile-menu li:nth-child(2) {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: aquamarine;
+  border-radius: 50%;
+}
+
+.profile-actions > button{
+  border-radius: 1rem;
+  width: 8rem;
+  height: 2rem;
+}
+
