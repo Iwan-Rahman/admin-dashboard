@@ -52,7 +52,7 @@ body {
 }
 
 .header {
-  padding: 1rem 3rem;
+  padding: 1rem 2.5rem;
   display: grid;
   grid-template: 1fr 2fr / 3fr 1fr;
   gap: 1rem;
@@ -72,7 +72,8 @@ body {
 }
 
 .profile-menu > ul {
-  gap: 2rem;
+  gap: 1rem;
+  justify-content: end;
 }
 
 .profile-actions{
@@ -209,5 +210,18 @@ body {
   border-radius: 1rem;
   width: clamp(5rem,10vw,8rem);
   height: 2rem;
+}
+
+form > button {
+  background: none;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+  display: flex;
+  align-self: center;
+}
+
+.form > button > img {
+  margin: auto auto;
 }
 
