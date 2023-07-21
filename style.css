@@ -207,7 +207,7 @@ body {
 
 .profile-actions > button{
   border-radius: 1rem;
-  width: 8rem;
+  width: clamp(5rem,10vw,8rem);
   height: 2rem;
 }
 
