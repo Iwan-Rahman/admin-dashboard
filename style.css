@@ -210,6 +210,10 @@ body {
   border-radius: 1rem;
   width: clamp(5rem,10vw,8rem);
   height: 2rem;
+  background-color: rgb(var(--secondary-color));
+  color: rgb(var(--accent-color));
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 900;
 }
 
 form > button {
