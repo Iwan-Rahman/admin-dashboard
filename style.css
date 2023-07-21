@@ -132,8 +132,8 @@ body {
 
 .project > ul {
   display: grid;
-  grid-template: 10rem / repeat(auto-fit,minmax(10rem,1fr));
-  grid-auto-rows: 10rem;
+  grid-template: 12rem / repeat(auto-fit,minmax(12rem,1fr));
+  grid-auto-rows: 12rem;
   gap: 2rem;
 }
 
@@ -144,6 +144,8 @@ body {
   border-bottom: 0.3rem solid rgba(var(--accent-color),1);
   display: flex;
   justify-content: center;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgb(var(--primary-color),.8);
+  transition: 0.5s;
 }
 
 
@@ -298,3 +300,6 @@ form > button > img {
   color: rgb(var(--secondary-color));
 }
 
+.project > ul > li:hover {
+  transform: scale(1.1);
+}
