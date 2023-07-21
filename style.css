@@ -171,8 +171,8 @@ body {
 }
 
 .trending li > div:first-child {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .trending li {
@@ -180,11 +180,37 @@ body {
   grid-template: 1fr / 1fr 3fr;
   align-items: center;
   gap: 0.5rem;
+  padding: 0.5rem 0rem;
+}
+
+.trending li:first-child > div:first-child {
+  background-color: mediumvioletred;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+
+.trending li:nth-child(2) > div:first-child {
+  background-color: springgreen;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+
+.trending li:nth-child(3) > div:first-child {
+  background-color: aquamarine;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+
+.trending li:nth-child(4) > div:first-child {
+  background-color:goldenrod;
+  border-radius: 50%;
+  padding: 0.2rem;
 }
 
 .announcement > ul > li , .trending > ul > li{
   overflow: hidden;
   border-bottom: 0.2rem double rgb(var(--accent-color));
+  cursor:default;
 }
 
 
@@ -271,3 +297,4 @@ form > button > img {
   background-color: rgb(var(--accent-color));
   color: rgb(var(--secondary-color));
 }
+
